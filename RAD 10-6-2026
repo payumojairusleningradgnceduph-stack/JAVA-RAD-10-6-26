@@ -1,0 +1,187 @@
+import java.util.*;
+
+public class Main {
+   public static void main(String[] args) {
+       System.out.println("Hello, Bro");
+       Scanner input = new Scanner(System.in);
+       String name;
+       int age;
+       String address;
+       double weight;
+       double height;
+      
+       System.out.print("What is your name: ");
+       name = input.nextLine();
+
+       System.out.print("How old are you: ");
+       age = input.nextInt();
+       input.nextLine();
+
+       System.out.print("Where is your address: ");
+       address = input.nextLine();
+
+       System.out.print("Enter your weight (kg): ");
+       weight = input.nextDouble();
+
+       System.out.print("Enter your height (cm): ");
+       height = input.nextDouble();
+
+       System.out.println("\nYou are " + name + ", " + age+
+               " years old, living at " + address +
+               ". Your weight is " + weight + " kg and your height is " +
+               height + " cm.");
+
+       input.close();
+   }
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        boolean repeat = true;
+
+        System.out.println("=== SIMPLE CALCULATOR ===");
+
+        while (repeat) {
+
+            System.out.print("Enter value of X: ");
+            double x = sc.nextDouble();
+
+            System.out.print("Enter value of Y: ");
+            double y = sc.nextDouble();
+
+            System.out.println("\nChoose operator:");
+            System.out.println("+ Add");
+            System.out.println("- Subtract");
+            System.out.println("* Multiply");
+            System.out.println("/ Divide");
+            System.out.print("Enter operator: ");
+
+            char op = sc.next().charAt(0);
+            double ans = 0;
+
+            switch(op) {
+                case '+':
+                    ans = x + y;
+                    System.out.println("Result: " + x + " + " + y + " = " + ans);
+
+                    break;
+
+                case '-':
+
+                    ans = x - y;
+
+                    System.out.println("Result: " + x + " - " + y + " = " + ans);
+
+                    break;
+
+                case '*':
+
+                    ans = x * y;
+
+                    System.out.println("Result: " + x + " * " + y + " = " + ans);
+
+                    break;
+
+                case '/':
+
+                    if (y == 0) {
+
+                        System.out.println("Error! Cannot divide by zero.");
+
+                    } else {
+
+                        ans = x / y;
+
+                        System.out.println("Result: " + x + " / " + y + " = " + ans);
+
+                    }
+
+                    break;
+
+                default:
+
+                    System.out.println("Invalid operator! Use + - * / only.");
+
+            }
+
+            System.out.print("\nCalculate again? (y/n): ");
+            char choice = sc.next().charAt(0);
+            if (choice == 'n' || choice == 'N') {
+
+                repeat = false;
+                System.out.println("Program Finished.");
+
+            }
+
+        }
+
+        sc.close();
+
+    }
+
+}
+
+
+
+
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       System.out.println("A#3 DIAGNOSTIC ACTIVITY (LOOPS)");
+       System.out.println("Numbers divisible by 3, not greater than 30, skipping 7, stopped at 30");
+       System.out.println("---------------------------------------------");
+       for (int i = 1; i <= 100; i++) {
+           // STOPPED AT 30 USING BREAK
+           if (i > 30) {
+               break;
+           }
+           // SKIPPING IF NUMBER 7 USING CONTINUE
+           if (i == 7) {
+               continue;
+           }
+           // DIVISIBLE BY 3
+           if (i % 3 == 0) {
+               System.out.println(i);
+           }
+       }
+       input.close();
+   }
+}
+
+
+
+
+
+
+
+public class Countdown {
+    public static void main(String[] angs) {
+
+        int count = 50;
+
+        while (count >= 0) {
+            System.out.println(count);
+
+            count --;
+        }
+        
+    }
+}               
+
+
+               
+
+  
